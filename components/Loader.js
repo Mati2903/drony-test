@@ -30,7 +30,7 @@ const Loader = () => {
 	useEffect(() => {
 		const loader = document.querySelector(".loader");
 		if (!loading && document.readyState === "complete") {
-			loader.style.top = "-100%";
+			loader.style.top = "-120%";
 		}
 	});
 
