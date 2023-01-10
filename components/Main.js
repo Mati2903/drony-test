@@ -1,8 +1,7 @@
 import ProgressBar from "./ProgressBar";
 import Video from "./Video";
-import { useEffect, useState } from "react";
 
-const Main = ({ data }) => {
+const Main = () => {
 	return (
 		<main className="main">
 			<ProgressBar />

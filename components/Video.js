@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from "react";
-import Image from "next/image";
-import { useAnimation, useInView, useScroll } from "framer-motion";
-import { motion } from "framer-motion";
-import { relativeTimeThreshold } from "moment";
-import { TbContainer, TbRefresh } from "react-icons/tb";
-import Loader from "../components/Loader";
+// import Image from "next/image";
+// import { useAnimation, useInView, useScroll } from "framer-motion";
+// import { motion } from "framer-motion";
+// import { relativeTimeThreshold } from "moment";
+// import { TbContainer, TbRefresh } from "react-icons/tb";
+// import Loader from "../components/Loader";
 
 const Video = () => {
 	// const ref = useRef(null);
