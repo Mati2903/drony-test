@@ -68,7 +68,7 @@ const Video = () => {
 				// controls
 				muted={true}
 				// currentTime={scroll}
-				src="/desktop.mp4"
+				src="/desktopcompress.mp4"
 
 				// src={windowWidth > 768 ? "/desktopcompress.mp4" : "/mobilecompress.mp4"}
 			>
