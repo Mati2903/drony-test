@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 // import Image from "next/image";
 // import { useAnimation, useInView, useScroll } from "framer-motion";
 // import { motion } from "framer-motion";
@@ -75,6 +76,10 @@ const Video = () => {
 				Your browser does not support the video tag. Try to open this website in
 				another browser.
 			</video>
+			<a href="#more" className="main__header-more">
+				<span className="main__see-more">Zobacz jak pracujemy</span>
+				<MdKeyboardArrowDown />
+			</a>
 			{/* <p>PropWash</p> */}
 		</div>
 	);
