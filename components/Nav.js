@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactBtn from "./ContactBtn";
 
 const Nav = () => {
 	return (
@@ -8,9 +9,7 @@ const Nav = () => {
 			</Link>
 			<ul>
 				<li>
-					<Link href="#contact">
-						<button className="nav__contact-btn">KONTAKT</button>
-					</Link>
+					<ContactBtn />
 				</li>
 			</ul>
 		</nav>
