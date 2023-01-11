@@ -50,10 +50,13 @@ const Video = () => {
 	});
 
 	const handleScroll = () => {
+		const checkForMore = document.querySelector(".main__header-more");
 		if (window.scrollY > 100) {
-			document.querySelector(".main__header-more").style.opacity = "0";
+			checkForMore.style.opacity = "0";
+			checkForMore.style.pointerEvents = "none";
 		} else {
-			document.querySelector(".main__header-more").style.opacity = "1";
+			checkForMore.style.opacity = "1";
+			checkForMore.style.pointerEvents = "all";
 		}
 	};
 
