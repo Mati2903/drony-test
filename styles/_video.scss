@@ -5,6 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	video {
 		position: absolute;
 		left: 0;
@@ -38,6 +39,8 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		//for changing opacity on scroll in video.js file
+		transition: opacity 0.5s ease-in-out;
 
 		span {
 			font-size: 2rem;

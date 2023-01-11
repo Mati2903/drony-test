@@ -49,6 +49,18 @@ const Video = () => {
 		window.addEventListener("resize", handleResize, false);
 	});
 
+	const handleScroll = () => {
+		if (window.scrollY > 100) {
+			document.querySelector(".main__header-more").style.opacity = "0";
+		} else {
+			document.querySelector(".main__header-more").style.opacity = "1";
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll, false);
+	});
+
 	// const [videoUrl, setVideoUrl] = useState("/desktop.mp4");
 
 	// useEffect(() => {
