@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ContactBtn from "./ContactBtn";
+import ContactBtn from "../elements/ContactBtn";
 
 const Nav = () => {
 	return (

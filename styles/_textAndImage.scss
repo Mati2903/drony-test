@@ -1,0 +1,36 @@
+.text-image-container {
+	padding: 4rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 3rem;
+	.text-container {
+		width: 40vw;
+		min-width: 300px;
+		&__title {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+			line-height: 3rem;
+			text-align: center;
+		}
+		&__paragraph {
+			font-size: 1.2rem;
+			line-height: 2rem;
+			text-align: justify;
+			ul {
+				list-style: inside;
+				li {
+					margin: 1rem 0rem 1rem 2rem;
+				}
+			}
+		}
+	}
+	.img-container {
+		width: 40vw;
+		min-width: 300px;
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -11,12 +11,20 @@ const ContactBtn = () => {
 	};
 
 	useEffect(() => {
-		document
-			.querySelector(".nav__contact-list")
-			.addEventListener("click", () => {
-				document.querySelector(".nav__contact-list").classList.remove("open");
-			});
+		const closeBtn = document.querySelector(".nav__contact-group-close");
+		const mainSection = document.querySelector(".main");
+
+		closeBtn.addEventListener("click", () => {
+			document.querySelector(".nav__contact-list").classList.remove("open");
+		});
+		mainSection.addEventListener("click", () => {
+			document.querySelector(".nav__contact-list").classList.remove("open");
+		});
 	});
+
+	// document.querySelector(".main").addEventListener("click", () => {
+	// 	document.querySelector(".nav__contact-list").classList.remove("open");
+	// });
 
 	return (
 		<div className="nav__contact-list">

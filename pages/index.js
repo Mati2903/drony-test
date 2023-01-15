@@ -1,13 +1,13 @@
-import Nav from "../components/Nav";
-import Main from "../components/Main";
-import Footer from "../components/Footer";
-import Loader from "../components/Loader";
+import Nav from "../components/sections/Nav";
+import Main from "../components/sections/Main";
+import Footer from "../components/sections/Footer";
+import Loader from "../components/elements/Loader";
 import { useEffect, useState } from "react";
 
 export default function Home() {
 	return (
 		<>
-			<Loader />
+			{/* <Loader /> */}
 			<Nav />
 			<Main />
 		</>

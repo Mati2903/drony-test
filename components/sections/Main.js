@@ -1,5 +1,8 @@
-import ProgressBar from "./ProgressBar";
-import Video from "./Video";
+import ProgressBar from "../elements/ProgressBar";
+import Video from "../sections/Video";
+import WhatIsFPV from "../sections/WhatIsFPV";
+import FPVFeatures from "./FPVFeatures";
+import FPVApplication from "./FPVApplication";
 
 const Main = () => {
 	return (
@@ -8,6 +11,9 @@ const Main = () => {
 			<section id="video" className="main__background-video">
 				<Video />
 			</section>
+			<WhatIsFPV />
+			<FPVFeatures />
+			<FPVApplication />
 
 			{/* <section id="drones" className="main__our-drones">
 				Sprzęt typu jakie drony jaka kamera
