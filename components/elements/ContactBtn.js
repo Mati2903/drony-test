@@ -14,12 +14,12 @@ const ContactBtn = () => {
 		const closeBtn = document.querySelector(".nav__contact-group-close");
 		const mainSection = document.querySelector(".main");
 
-		closeBtn.addEventListener("click", () => {
+		const handleClassRemove = () => {
 			document.querySelector(".nav__contact-list").classList.remove("open");
-		});
-		mainSection.addEventListener("click", () => {
-			document.querySelector(".nav__contact-list").classList.remove("open");
-		});
+		};
+
+		closeBtn.addEventListener("click", handleClassRemove);
+		mainSection.addEventListener("click", handleClassRemove);
 	});
 
 	// document.querySelector(".main").addEventListener("click", () => {

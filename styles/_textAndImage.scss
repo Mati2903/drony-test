@@ -1,13 +1,14 @@
 .text-image-container {
-	padding: 4rem 2rem;
+	padding: 2rem 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 3rem;
 	.text-container {
-		width: 40vw;
+		width: 45vw;
 		min-width: 300px;
+		max-width: 500px;
 		&__title {
 			font-size: 2rem;
 			margin-bottom: 2rem;
@@ -17,7 +18,7 @@
 		&__paragraph {
 			font-size: 1.2rem;
 			line-height: 2rem;
-			text-align: justify;
+			text-align: center; //desktops should be right or left
 			ul {
 				list-style: inside;
 				li {
@@ -28,7 +29,8 @@
 	}
 	.img-container {
 		width: 40vw;
-		min-width: 300px;
+		min-width: 270px;
+		max-width: 500px;
 		img {
 			width: 100%;
 		}

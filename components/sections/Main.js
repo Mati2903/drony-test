@@ -3,6 +3,7 @@ import Video from "../sections/Video";
 import WhatIsFPV from "../sections/WhatIsFPV";
 import FPVFeatures from "./FPVFeatures";
 import FPVApplication from "./FPVApplication";
+import OurDrones from "./OurDrones";
 
 const Main = () => {
 	return (
@@ -11,9 +12,11 @@ const Main = () => {
 			<section id="video" className="main__background-video">
 				<Video />
 			</section>
-			<WhatIsFPV />
-			<FPVFeatures />
-			<FPVApplication />
+			<OurDrones />
+			<div style={{ height: "800px" }}></div>
+			{/* <WhatIsFPV /> */}
+			{/* <FPVFeatures /> */}
+			{/* <FPVApplication /> */}
 
 			{/* <section id="drones" className="main__our-drones">
 				Sprzęt typu jakie drony jaka kamera
