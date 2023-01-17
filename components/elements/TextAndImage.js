@@ -18,29 +18,34 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 	}, []);
 
 	let animation;
+	//variables below are from devtools, this is last value before element is not visible
+	//60 and 25 for mobile
+	const lastYValue = 40;
+	const lastRotateDeg = 18;
 	switch (id) {
 		case 1:
 			animation = {
-				y: inView ? scrollY / 30 : 0,
-				rotate: inView ? scrollY / 100 : 0,
+				//different dividers values because scroll value is bigger with scrolling down and it should be approximately the same transform and rotate values for all animated elements
+				y: inView ? scrollY / 30 : lastYValue,
+				rotate: inView ? scrollY / 80 : lastRotateDeg,
 			};
 			break;
 		case 2:
 			animation = {
-				y: inView ? scrollY / 30 : 0,
-				rotate: inView ? -scrollY / 100 : 0,
+				y: inView ? scrollY / 40 : lastYValue,
+				rotate: inView ? scrollY / 100 : lastRotateDeg,
 			};
 			break;
 		case 3:
 			animation = {
-				y: inView ? scrollY / 30 : 0,
-				rotate: inView ? scrollY / 100 : 0,
+				y: inView ? scrollY / 50 : lastYValue,
+				rotate: inView ? scrollY / 120 : lastRotateDeg,
 			};
 			break;
 		case 4:
 			animation = {
-				y: inView ? scrollY / 30 : 0,
-				rotate: inView ? scrollY / 100 : 0,
+				y: inView ? scrollY / 60 : lastYValue,
+				rotate: inView ? scrollY / 150 : lastRotateDeg,
 			};
 			break;
 		default:
@@ -51,7 +56,7 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 		<div
 			ref={ref}
 			className="text-image-container"
-			style={{ flexDirection: direction }}
+			style={{ flexDirection: direction }} //to change direction of image and text
 		>
 			<div className="text-container">
 				<h2 className="text-container__title">{title}</h2>
@@ -63,7 +68,12 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 					alt={imgAlt}
 					initial={{ y: 0, rotate: 0 }}
 					animate={animation}
-					transition={{ duration: 0 }}
+					transition={{
+						type: "spring",
+						stiffness: 100,
+						damping: 30,
+						restDelta: 0.001,
+					}}
 					positionTransition //property for remember last position after animation
 				/>
 			</div>
