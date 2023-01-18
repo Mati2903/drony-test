@@ -18,34 +18,38 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 	}, []);
 
 	let animation;
-	//variables below are from devtools, this is last value before element is not visible
-	//60 and 25 for mobile
-	const lastYValue = 40;
-	const lastRotateDeg = 18;
+	// variable to get offset top value from every image container which is used in animation in switch-case function
+	let elementTop = document.getElementById(id).offsetTop;
+
+	//two variables for transform effects "amount" - the bigger values are, the smaller transform is generated
+	const translateDivider = 20;
+	const rotationDivider = 150;
+
+	// switch case instruction is for setting different animation properties depending on component ID passed in as a prop
 	switch (id) {
 		case 1:
 			animation = {
-				//different dividers values because scroll value is bigger with scrolling down and it should be approximately the same transform and rotate values for all animated elements
-				y: inView ? scrollY / 30 : lastYValue,
-				rotate: inView ? scrollY / 80 : lastRotateDeg,
+				// this code is calculating translateY and rotate values to be always the same regardless of document height for different devices and image position on website - scrollY value is rising with scrolling down so dividing it with constant value gives larger and larger results for images which are lower than others
+				y: (scrollY - elementTop) / translateDivider,
+				rotate: (scrollY - elementTop) / rotationDivider,
 			};
 			break;
 		case 2:
 			animation = {
-				y: inView ? scrollY / 40 : lastYValue,
-				rotate: inView ? scrollY / 100 : lastRotateDeg,
+				y: (scrollY - elementTop) / translateDivider,
+				rotate: -(scrollY - elementTop) / rotationDivider,
 			};
 			break;
 		case 3:
 			animation = {
-				y: inView ? scrollY / 50 : lastYValue,
-				rotate: inView ? scrollY / 120 : lastRotateDeg,
+				y: (scrollY - elementTop) / translateDivider,
+				rotate: (scrollY - elementTop) / rotationDivider,
 			};
 			break;
 		case 4:
 			animation = {
-				y: inView ? scrollY / 60 : lastYValue,
-				rotate: inView ? scrollY / 150 : lastRotateDeg,
+				y: (scrollY - elementTop) / translateDivider,
+				rotate: -(scrollY - elementTop) / rotationDivider,
 			};
 			break;
 		default:
@@ -54,15 +58,14 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 
 	return (
 		<div
-			ref={ref}
 			className="text-image-container"
-			style={{ flexDirection: direction }} //to change direction of image and text
+			style={{ flexDirection: direction }} //to change order of image and text - which element should be on the right and left - does not apply to mobile wiev
 		>
 			<div className="text-container">
 				<h2 className="text-container__title">{title}</h2>
 				<p className="text-container__paragraph">{paragraph}</p>
 			</div>
-			<div className="img-container">
+			<div className="img-container" ref={ref} id={id}>
 				<motion.img
 					src={imgUrl}
 					alt={imgAlt}
@@ -74,7 +77,6 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 						damping: 30,
 						restDelta: 0.001,
 					}}
-					positionTransition //property for remember last position after animation
 				/>
 			</div>
 		</div>
