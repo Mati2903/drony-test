@@ -32,6 +32,7 @@ const OurDrones = () => {
 				imgAlt="zdjęcie kamery gopro 11"
 				direction="row-reverse"
 				id={4}
+				img2Url="/gopro11.png"
 			/>
 		</section>
 	);

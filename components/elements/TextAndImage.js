@@ -2,7 +2,15 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
-const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
+const TextAndImage = ({
+	title,
+	paragraph,
+	imgUrl,
+	imgAlt,
+	direction,
+	id,
+	img2Url,
+}) => {
 	const [scrollY, setScrollY] = useState(0);
 	const [elementOffsetTop, setElementOffsetTop] = useState(0);
 	const [ref, inView] = useInView({
@@ -70,6 +78,8 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 			</div>
 			<div className="img-container" ref={ref} id={id}>
 				<motion.img
+					// different style if there is another photo in image container
+					style={img2Url ? { width: "70%", alignSelf: "flex-start" } : null}
 					src={imgUrl}
 					alt={imgAlt}
 					initial={{ y: 0, rotate: 0 }}
@@ -81,6 +91,25 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 						restDelta: 0.001,
 					}}
 				/>
+				{/* if there is another image code below is executing */}
+				{img2Url ? (
+					<motion.img
+						style={{ width: "70%", alignSelf: "flex-end" }}
+						src={img2Url}
+						initial={{ y: 0, rotate: 0 }}
+						//different animation values to create 3d effect
+						animate={{
+							y: ((scrollY - elementOffsetTop) / translateDivider) * 1.5,
+							rotate: (-(scrollY - elementOffsetTop) / rotationDivider) * 1.5,
+						}}
+						transition={{
+							type: "spring",
+							stiffness: 100,
+							damping: 30,
+							restDelta: 0.001,
+						}}
+					/>
+				) : null}
 			</div>
 		</div>
 	);

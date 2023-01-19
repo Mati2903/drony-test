@@ -32,6 +32,10 @@
 		min-width: 270px;
 		max-width: 500px;
 		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		// align-items: center;
+		justify-content: center;
 		img {
 			width: 100%;
 		}
