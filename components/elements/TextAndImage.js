@@ -4,22 +4,25 @@ import { useEffect, useState } from "react";
 
 const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 	const [scrollY, setScrollY] = useState(0);
+	const [elementOffsetTop, setElementOffsetTop] = useState(0);
 	const [ref, inView] = useInView({
 		threshold: 0, // amount of image visible to start animation
 	});
 
+	// let elementTop;
 	//listening to scroll and save its value in the state
 	useEffect(() => {
 		function handleScroll() {
 			setScrollY(window.scrollY);
+			// state to get offset top value from every image container which is used in animation in switch-case function
+			setElementOffsetTop(document.getElementById(id).offsetTop);
 		}
+
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	let animation;
-	// variable to get offset top value from every image container which is used in animation in switch-case function
-	let elementTop = document.getElementById(id).offsetTop;
 
 	//two variables for transform effects "amount" - the bigger values are, the smaller transform is generated
 	const translateDivider = 20;
@@ -30,26 +33,26 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, direction, id }) => {
 		case 1:
 			animation = {
 				// this code is calculating translateY and rotate values to be always the same regardless of document height for different devices and image position on website - scrollY value is rising with scrolling down so dividing it with constant value gives larger and larger results for images which are lower than others
-				y: (scrollY - elementTop) / translateDivider,
-				rotate: (scrollY - elementTop) / rotationDivider,
+				y: (scrollY - elementOffsetTop) / translateDivider,
+				rotate: (scrollY - elementOffsetTop) / rotationDivider,
 			};
 			break;
 		case 2:
 			animation = {
-				y: (scrollY - elementTop) / translateDivider,
-				rotate: -(scrollY - elementTop) / rotationDivider,
+				y: (scrollY - elementOffsetTop) / translateDivider,
+				rotate: -(scrollY - elementOffsetTop) / rotationDivider,
 			};
 			break;
 		case 3:
 			animation = {
-				y: (scrollY - elementTop) / translateDivider,
-				rotate: (scrollY - elementTop) / rotationDivider,
+				y: (scrollY - elementOffsetTop) / translateDivider,
+				rotate: (scrollY - elementOffsetTop) / rotationDivider,
 			};
 			break;
 		case 4:
 			animation = {
-				y: (scrollY - elementTop) / translateDivider,
-				rotate: -(scrollY - elementTop) / rotationDivider,
+				y: (scrollY - elementOffsetTop) / translateDivider,
+				rotate: -(scrollY - elementOffsetTop) / rotationDivider,
 			};
 			break;
 		default:
