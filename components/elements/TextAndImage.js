@@ -100,7 +100,7 @@ const TextAndImage = ({
 						//different animation values to create 3d effect
 						animate={{
 							y: ((scrollY - elementOffsetTop) / translateDivider) * 1.5,
-							rotate: (-(scrollY - elementOffsetTop) / rotationDivider) * 1.5,
+							rotate: (-(scrollY - elementOffsetTop) / rotationDivider) * 1.2,
 						}}
 						transition={{
 							type: "spring",
