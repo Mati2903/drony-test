@@ -1,77 +1,72 @@
-.video-container {
-	position: relative;
-	height: 85vh; //100vh minus nav height
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	video {
-		position: absolute;
-		left: 0;
+.video {
+	height: 200vh;
+	position: absolute;
+	&__container {
+		position: sticky;
+		position: -webkit-sticky;
 		top: 0;
-		// max-height: 100vh;
+		height: 85vh; //100vh minus nav height
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		// filter: brightness(50%); - powoduje lagi video
-		// filter: blur(3px);
-		// -webkit-filter: blur(3px);
-		// transition: filter 0.3s linear;
-		// &:hover {
-		// 	filter: none;
-		// 	-webkit-filter: none;
-		// }
-	}
-
-	p {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 5rem;
-	}
-	.main__header-more {
-		position: absolute;
-		bottom: 10%;
-		color: white;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex-direction: column;
-		//for changing opacity on scroll in video.js file
-		transition: opacity 0.5s ease-in-out;
+		overflow: hidden;
 
-		span {
-			font-size: 2rem;
+		.video__element {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
-		svg {
-			font-size: 4rem;
-			animation: arrowMove 3.5s ease-in infinite;
-		}
-	}
-}
 
-@keyframes arrowMove {
-	0% {
-		transform: translateY(0px);
+		p {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 5rem;
+		}
+		.main__header-more {
+			position: absolute;
+			bottom: 10%;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			//for changing opacity on scroll in video.js file
+			transition: opacity 0.5s ease-in-out;
+
+			span {
+				font-size: 2rem;
+			}
+			svg {
+				font-size: 4rem;
+				animation: arrowMove 3.5s ease-in infinite;
+			}
+		}
 	}
-	10% {
-		transform: translateY(15px);
-	}
-	20% {
-		transform: translateY(10px);
-	}
-	30% {
-		transform: translateY(15px);
-	}
-	40% {
-		transform: translateY(10px);
-	}
-	50% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(0px);
+
+	@keyframes arrowMove {
+		0% {
+			transform: translateY(0px);
+		}
+		10% {
+			transform: translateY(15px);
+		}
+		20% {
+			transform: translateY(10px);
+		}
+		30% {
+			transform: translateY(15px);
+		}
+		40% {
+			transform: translateY(10px);
+		}
+		50% {
+			transform: translateY(0px);
+		}
+		100% {
+			transform: translateY(0px);
+		}
 	}
 }

@@ -13,22 +13,25 @@ const TextAndImage = ({
 }) => {
 	const [scrollY, setScrollY] = useState(0);
 	const [elementOffsetTop, setElementOffsetTop] = useState(0);
-	const [ref, inView] = useInView({
-		threshold: 0, // amount of image visible to start animation
-	});
+	// const [ref, inView] = useInView({
+	// 	threshold: 0, // amount of image visible to start animation
+	// });
 
-	// let elementTop;
 	//listening to scroll and save its value in the state
 	useEffect(() => {
 		function handleScroll() {
 			setScrollY(window.scrollY);
 			// state to get offset top value from every image container which is used in animation in switch-case function
-			setElementOffsetTop(document.getElementById(id).offsetTop);
+			// querySelector for video class is checking the height of video section and is added to images offset
+			setElementOffsetTop(
+				document.getElementById(id).offsetTop +
+					document.querySelector(".video").clientHeight
+			);
 		}
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	}, [scrollY]);
 
 	let animation;
 
@@ -73,10 +76,10 @@ const TextAndImage = ({
 			style={{ flexDirection: direction }} //to change order of image and text - which element should be on the right and left - does not apply to mobile wiev
 		>
 			<div className="text-container">
-				<h2 className="text-container__title">{title}</h2>
+				<h3 className="text-container__title">{title}</h3>
 				<p className="text-container__paragraph">{paragraph}</p>
 			</div>
-			<div className="img-container" ref={ref} id={id}>
+			<div className="img-container" id={id}>
 				<motion.img
 					// different style if there is another photo in image container
 					style={img2Url ? { width: "70%", alignSelf: "flex-start" } : null}

@@ -7,11 +7,9 @@ const Nav = () => {
 			<Link href="/">
 				<img src="/logo-fpv-white.png" alt="" className="nav__logo" />
 			</Link>
-			<ul>
-				<li>
-					<ContactBtn />
-				</li>
-			</ul>
+			<div className="nav__btn-container">
+				<ContactBtn />
+			</div>
 		</nav>
 	);
 };

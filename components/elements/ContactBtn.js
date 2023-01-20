@@ -1,36 +1,39 @@
-import { useState } from "react";
-import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GrClose } from "react-icons/gr";
 import { BsTelephone } from "react-icons/bs";
 import { MdAlternateEmail } from "react-icons/md";
 
 const ContactBtn = () => {
-	const handleBtnClick = () => {
-		document.querySelector(".nav__contact-list").classList.toggle("open");
-	};
+	const [open, setOpen] = useState(false); // state of the button
 
+	//handle opening and closing button after click
 	useEffect(() => {
+		const contactBtn = document.querySelector(".nav__contact-btn");
 		const closeBtn = document.querySelector(".nav__contact-group-close");
-		const mainSection = document.querySelector(".main");
+		const section = document.querySelector(".video");
 
-		const handleClassRemove = () => {
-			document.querySelector(".nav__contact-list").classList.remove("open");
+		const handleContactOpen = () => {
+			setOpen(true);
 		};
 
-		closeBtn.addEventListener("click", handleClassRemove);
-		mainSection.addEventListener("click", handleClassRemove);
-	});
+		const handleContactClose = () => {
+			setOpen(false);
+		};
 
-	// document.querySelector(".main").addEventListener("click", () => {
-	// 	document.querySelector(".nav__contact-list").classList.remove("open");
-	// });
+		contactBtn.addEventListener("click", handleContactOpen);
+		closeBtn.addEventListener("click", handleContactClose);
+		section.addEventListener("click", handleContactClose);
+
+		return () => {
+			contactBtn.removeEventListener("click", handleContactOpen);
+			closeBtn.removeEventListener("click", handleContactClose);
+			section.removeEventListener("click", handleContactClose);
+		};
+	}, [open]);
 
 	return (
-		<div className="nav__contact-list">
-			<button className="nav__contact-btn" onClick={handleBtnClick}>
-				KONTAKT
-			</button>
+		<div className={`nav__contact-list ${open ? "open" : ""}`}>
+			<button className="nav__contact-btn">KONTAKT</button>
 			<div className="nav__contact-group">
 				<a href="tel:123-456-7890">
 					<BsTelephone />

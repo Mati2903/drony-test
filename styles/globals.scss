@@ -1,12 +1,14 @@
 @import "./reset";
 @import "./nav";
 @import "./scroll";
-@import "./main";
 @import "./footer";
 @import "./loader";
 @import "./video";
 @import "./contactBtn";
 @import "./textAndImage";
+@import "./ourDrones";
+@import "./whatIsFPV";
+@import "./shadow";
 
 html,
 body {
@@ -15,6 +17,11 @@ body {
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	scroll-behavior: smooth;
+	background-color: black;
+}
+
+section {
+	width: 100%;
 }
 
 a {
