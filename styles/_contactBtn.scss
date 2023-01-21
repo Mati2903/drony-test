@@ -7,7 +7,6 @@
 	z-index: 99;
 	top: 0;
 	right: 0;
-	transform: translateY(-50%);
 	width: 120px;
 	height: 30px;
 	opacity: 0.9;
@@ -29,6 +28,7 @@
 		transition: color 0.3s linear;
 		color: black;
 		font-size: 1.25rem;
+		padding: 0;
 		// transition for closing contact
 		transition: visibility 0s linear 1s, height 0s linear 1s;
 	}
@@ -63,7 +63,6 @@
 //------ transitons are animating after opening contact list------
 
 .nav__contact-list.open {
-	transform: translateY(-15px); //half of closed button width
 	width: 300px;
 	min-width: 120px; //same as width of closed contact
 	height: 200px;

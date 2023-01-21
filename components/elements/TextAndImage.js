@@ -13,9 +13,9 @@ const TextAndImage = ({
 }) => {
 	const [scrollY, setScrollY] = useState(0);
 	const [elementOffsetTop, setElementOffsetTop] = useState(0);
-	// const [ref, inView] = useInView({
-	// 	threshold: 0, // amount of image visible to start animation
-	// });
+	const [ref, inView] = useInView({
+		threshold: 0.5, // amount of image visible to start animation
+	});
 
 	//listening to scroll and save its value in the state
 	useEffect(() => {
@@ -75,10 +75,15 @@ const TextAndImage = ({
 			className="text-image-container"
 			style={{ flexDirection: direction }} //to change order of image and text - which element should be on the right and left - does not apply to mobile wiev
 		>
-			<div className="text-container">
+			<motion.div
+				className="text-container"
+				ref={ref}
+				transition={{ duration: 1 }}
+				animate={inView ? { opacity: 1 } : { opacity: 0 }}
+			>
 				<h3 className="text-container__title">{title}</h3>
 				<p className="text-container__paragraph">{paragraph}</p>
-			</div>
+			</motion.div>
 			<div className="img-container" id={id}>
 				<motion.img
 					// different style if there is another photo in image container
