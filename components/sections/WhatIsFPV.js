@@ -15,15 +15,19 @@ const WhatIsFPV = () => {
 			);
 		};
 		//listener for window resize event, e.g. when user is changing view from portrait to landscape
+		window.addEventListener("scroll", handleResize);
 		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+			window.removeEventListener("scroll", handleResize);
+		};
 	}, [elementOffsetBottom]);
 
 	return (
 		<section
 			id="what-is-fpv"
 			className="what-is-fpv"
-			style={{ top: elementOffsetBottom }}
+			style={{ top: elementOffsetBottom > 0 ? elementOffsetBottom : "550vh" }}
 		>
 			<div></div>
 		</section>
