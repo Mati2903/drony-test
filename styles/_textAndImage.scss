@@ -1,5 +1,4 @@
 .text-image-container {
-	// min-height: 800px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -50,11 +49,8 @@
 		width: 40vw;
 		min-width: 270px;
 		max-width: 500px;
-		// height: 50vh;
 		display: flex;
 		flex-direction: column;
-		// align-items: center;
-		// justify-content: center;
 		img {
 			width: 100%;
 		}
@@ -62,12 +58,11 @@
 }
 
 //---------------- larger screens ------------------------------------
-
+// image and text are next to each other
 @media screen and (min-width: 667px) /* value tested in devtools when image and text are next to each other */ {
 	.text-image-container {
 		flex-direction: row;
-		// padding: 0 1rem;
-		min-height: 85vh;
+		min-height: 50vh; // two containers on screen
 		&:nth-child(odd) {
 			flex-direction: row-reverse;
 		}
@@ -76,6 +71,6 @@
 
 @media screen and (min-width: 1025px) {
 	.text-image-container {
-		// min-height: 80vh;
+		min-height: 85vh;
 	}
 }
