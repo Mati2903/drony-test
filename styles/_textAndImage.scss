@@ -1,12 +1,13 @@
 .text-image-container {
-	min-height: 95vh;
+	// min-height: 800px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 3rem;
 	overflow: hidden;
-	flex-direction: column-reverse !important;
+	flex-direction: column-reverse;
+	padding: 4rem 1rem; //gives 2x4rem space between containers
 
 	.text-container {
 		width: 45vw;
@@ -60,15 +61,21 @@
 	}
 }
 
+//---------------- larger screens ------------------------------------
+
 @media screen and (min-width: 667px) /* value tested in devtools when image and text are next to each other */ {
 	.text-image-container {
-		flex-direction: row !important;
+		flex-direction: row;
+		// padding: 0 1rem;
+		min-height: 85vh;
+		&:nth-child(odd) {
+			flex-direction: row-reverse;
+		}
 	}
 }
 
 @media screen and (min-width: 1025px) {
 	.text-image-container {
-		flex-direction: row !important;
-		min-height: 80vh;
+		// min-height: 80vh;
 	}
 }

@@ -16,7 +16,6 @@ const OurDrones = () => {
 				paragraph="Jest to dron pozwalający na płynne i bezpieczne przeloty w pobliżu ludzi lub innych prezentowanych obiektów. Świetnie sprawdza się przy nagrywaniu scen typu cinematic lub tworzeniu tak zwanych spacerów po dużych obiektach. Zapewnia bardzo stabilny i płynny materiał wideo."
 				imgUrl="/dron-3,5-cinewhoop.png"
 				imgAlt="zdjęcie drona typu FPV 3,5 cala cinewhoop"
-				direction="row-reverse"
 				id={2}
 			/>
 			<TextAndImage
@@ -31,7 +30,6 @@ const OurDrones = () => {
 				paragraph="Kamery zamontowane na dronach to GoPro 11 oraz GoPro 10. Umożliwiają one zapis obrazu w formacie 5,3k - 4k – 2,7k w dowolnym klatkażu oraz w 10 bitowym systemie kolorów."
 				imgUrl="/gopro11.png"
 				imgAlt="zdjęcie kamery gopro 11"
-				direction="row-reverse"
 				id={4}
 				img2Url="/gopro11.png"
 			/>

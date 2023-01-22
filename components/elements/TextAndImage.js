@@ -2,15 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
-const TextAndImage = ({
-	title,
-	paragraph,
-	imgUrl,
-	imgAlt,
-	direction,
-	id,
-	img2Url,
-}) => {
+const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, id, img2Url }) => {
 	const [scrollY, setScrollY] = useState(0);
 	const [elementOffsetTop, setElementOffsetTop] = useState(0);
 	const [ref, inView] = useInView({
@@ -71,10 +63,7 @@ const TextAndImage = ({
 	}
 
 	return (
-		<div
-			className="text-image-container"
-			style={{ flexDirection: direction }} //to change order of image and text - which element should be on the right and left - does not apply to mobile wiev
-		>
+		<div className="text-image-container">
 			<motion.div
 				className="text-container"
 				ref={ref}
