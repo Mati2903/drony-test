@@ -1,8 +1,34 @@
 import TextAndImage from "../elements/TextAndImage";
+import { useState, useEffect } from "react";
 
-const OurDrones = () => {
+const OurDrones = (ref) => {
+	const [offsetTop, setOffsetTop] = useState();
+
+	useEffect(() => {
+		setOffsetTop(
+			document.querySelector(".nav").offsetHeight +
+				document.querySelector(".video").offsetHeight +
+				document.querySelector(".what-is-fpv").offsetHeight
+		);
+
+		//function for event listeners on resize event - if window is resized section top value is updating
+		const handleResize = () => {
+			setOffsetTop(
+				//video section height
+				document.querySelector(".what-is-fpv").offsetHeight +
+					document.querySelector(".video").offsetHeight +
+					document.querySelector(".what-is-fpv").offsetHeight
+			);
+		};
+
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, [offsetTop]);
+
 	return (
-		<section className="our-drones">
+		<section className="our-drones" style={{ top: offsetTop }}>
 			<h2 className="our-drones__title">Sprzęt na którym pracujemy</h2>
 			<TextAndImage
 				title="Dron 5” freestyle"
@@ -26,8 +52,8 @@ const OurDrones = () => {
 				id={3}
 			/>
 			<TextAndImage
-				title="Urządzenia nagrywające"
-				paragraph="Kamery zamontowane na dronach to GoPro 11 oraz GoPro 10. Umożliwiają one zapis obrazu w formacie 5,3k - 4k – 2,7k w dowolnym klatkażu oraz w 10 bitowym systemie kolorów."
+				title="Kamery"
+				paragraph="Urządzenia do nagrywania zamontowane na dronach to kamery GoPro serii 10 i 11. Umożliwiają one zapis obrazu w rozdzielczościach 5,3k - 4k – 2,7k w dowolnym klatkażu oraz w 10-bitowym systemie kolorów."
 				imgUrl="/gopro11.png"
 				imgAlt="zdjęcie kamery gopro 11"
 				id={4}

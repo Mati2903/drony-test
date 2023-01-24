@@ -1,6 +1,7 @@
 .our-drones {
 	position: absolute;
-	top: 300vh; //offset from top for shadow element
+	top: 630vh; //offset from top of the page (must include all sections above heights)
+	padding-top: 10rem;
 	&__title {
 		font-size: 2.5rem;
 		text-align: center;

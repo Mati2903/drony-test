@@ -1,10 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Shadow from "../elements/Shadow";
+import Logo from "../elements/Logo";
 
 const Video = () => {
 	const videoRef = useRef(null);
 	const checkForMoreRef = useRef(null);
+	const videoSectionRef = useRef(null);
+
 	// const isInView = useInView(ref, { margin: "-300px" });
 
 	// const animation = useAnimation();
@@ -62,6 +65,21 @@ const Video = () => {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
+	// //testing effect for changing opacity depend on scroll value
+	// useEffect(() => {
+	// 	const visibility = () => {
+	// 		if (window.scrollY > document.querySelector(".video").clientHeight / 2) {
+	// 			setIsVisible(true);
+	// 		} else {
+	// 			setIsVisible(false);
+	// 		}
+	// 	};
+
+	// 	window.addEventListener("scroll", visibility);
+	// 	return () => {
+	// 		window.removeEventListener("scroll", visibility);
+	// 	};
+	// }, [isVisible]);
 	// const [videoUrl, setVideoUrl] = useState("/desktop.mp4");
 
 	// useEffect(() => {
@@ -74,7 +92,7 @@ const Video = () => {
 	// 	});
 	// }, [onResize]);
 	return (
-		<section className="video">
+		<section className="video" ref={videoSectionRef}>
 			<div className="video__container">
 				<video
 					id="movie"
@@ -95,6 +113,8 @@ const Video = () => {
 					<MdKeyboardArrowDown />
 				</a>
 			</div>
+
+			<Logo logoRef={videoSectionRef} />
 			<Shadow targetRef={videoRef} />
 		</section>
 	);

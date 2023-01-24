@@ -13,15 +13,15 @@ const TextAndImage = ({ title, paragraph, imgUrl, imgAlt, id, img2Url }) => {
 	let animation;
 	//listening to scroll and save its value in the state
 	useEffect(() => {
-		function handleScroll() {
-			// state to get offset top value from every image container which is used in animation in switch-case function
+		const handleScroll = () => {
+			// state to get offset top value for every image container which is used in animation function below (ternary operator)
 			setScrollY(window.scrollY);
-			// querySelector for video class is checking the height of video section and is added to images offset
+			// querySelector to get section offsetTop value and add to images offset
 			setElementOffsetTop(
 				imgContainerRef.current.offsetTop +
-					document.querySelector(".video").clientHeight
+					document.querySelector(".our-drones").offsetTop
 			);
-		}
+		};
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
