@@ -1,21 +1,25 @@
 import TextAndImage from "../elements/TextAndImage";
 import { useState, useEffect } from "react";
 
-const OurDrones = (ref) => {
+const OurDrones = () => {
 	const [offsetTop, setOffsetTop] = useState();
 
+	//set initial offset top value after first render
 	useEffect(() => {
 		setOffsetTop(
 			document.querySelector(".nav").offsetHeight +
 				document.querySelector(".video").offsetHeight +
 				document.querySelector(".what-is-fpv").offsetHeight
 		);
+	}, []);
 
+	//change offset top value if window is resized
+	useEffect(() => {
 		//function for event listeners on resize event - if window is resized section top value is updating
 		const handleResize = () => {
 			setOffsetTop(
 				//video section height
-				document.querySelector(".what-is-fpv").offsetHeight +
+				document.querySelector(".nav").offsetHeight +
 					document.querySelector(".video").offsetHeight +
 					document.querySelector(".what-is-fpv").offsetHeight
 			);

@@ -4,18 +4,22 @@ import ParallaxComp from "../elements/ParallaxComp";
 const WhatIsFPV = () => {
 	const [offsetTop, setOffsetTop] = useState();
 
+	//set initial offset top value after first render
 	useEffect(() => {
 		setOffsetTop(
-			document.querySelector(".video").offsetHeight +
-				document.querySelector(".nav").offsetHeight
+			document.querySelector(".nav").offsetHeight +
+				document.querySelector(".video").offsetHeight
 		);
+	}, []);
 
+	//change offset top value if window is resized
+	useEffect(() => {
 		//function for event listeners on resize event - if window is resized section top value is updating
 		const handleResize = () => {
 			setOffsetTop(
 				//video section height
-				document.querySelector(".video").offsetHeight +
-					document.querySelector(".nav").offsetHeight
+				document.querySelector(".nav").offsetHeight +
+					document.querySelector(".video").offsetHeight
 			);
 		};
 

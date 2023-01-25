@@ -7,10 +7,12 @@ const ParallaxComp = ({ imgUrl, header, mystyle }) => {
 			layers={[
 				{
 					image: imgUrl,
-					speed: -20,
+					speed: -10,
 				},
 				{
-					speed: 10,
+					speed: 25,
+					rotate: [-5, 10],
+					translateX: [0, 10],
 					children: (
 						<div className="container">
 							<img src="./fpvdrone.png" />

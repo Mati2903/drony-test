@@ -26,41 +26,20 @@ const Video = () => {
 	// });
 
 	//function to handle disappearing span element if scroll more than 100px
-	const handleScroll = () => {
-		// const checkForMore = document.querySelector(".check-for-more");
-		// const video = document.querySelector(".video-element");
-		// const videoContainer = document.querySelector(".video__container");
-		// const container = document.querySelector(".main__background-video");
-		//rotate video on scroll
-		// video.style.transform = `rotateX(${
-		// 	(window.scrollY - video.offsetTop) / 5
-		// }deg)`;
-
-		// let video = document.querySelector(".video__element");
-		// let container = document.querySelector(".video__container");
-
-		// window.addEventListener("scroll", function () {
-		// 	// video.style.top = container.offsetTop + "px";
-		// 	let value = window.scrollY;
-		// 	let limit = container.offsetTop + container.offsetHeight;
-		// 	if (value > container.offsetTop && value < limit) {
-		// 		video.style.top = value - (container.offsetTop + 100) + "px";
-		// 	}
-		// });
-
-		//disappearing of check for more text
-
-		if (window.scrollY > 100) {
-			if (!checkForMoreRef.current) return; //if its absent in DOM, return
-			checkForMoreRef.current.style.opacity = "0";
-			checkForMoreRef.current.style.pointerEvents = "none";
-		} else {
-			checkForMoreRef.current.style.opacity = "1";
-			checkForMoreRef.current.style.pointerEvents = "all";
-		}
-	};
 
 	useEffect(() => {
+		const handleScroll = () => {
+			//disappearing of check for more text
+			if (window.scrollY > 100) {
+				if (!checkForMoreRef.current) return; //if its absent in DOM, return
+				checkForMoreRef.current.style.opacity = "0";
+				checkForMoreRef.current.style.pointerEvents = "none";
+			} else {
+				checkForMoreRef.current.style.opacity = "1";
+				checkForMoreRef.current.style.pointerEvents = "all";
+			}
+		};
+
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
