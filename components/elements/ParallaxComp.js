@@ -11,7 +11,7 @@ const ParallaxComp = ({ imgUrl, header, mystyle }) => {
 				},
 				{
 					speed: 25,
-					rotate: [-5, 10],
+					rotate: [0, 15],
 					translateX: [0, 10],
 					children: (
 						<div className="container">
