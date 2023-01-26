@@ -1,0 +1,16 @@
+.video-card__container {
+	margin: 3rem 1rem;
+	width: 100%;
+	max-width: 800px;
+	aspect-ratio: 16/9;
+	flex-shrink: 1;
+	// max-width: 800px;
+	// aspect-ratio: 16/9;
+}
+
+@media screen and (min-width: 768px) {
+	.video-card__container {
+		margin: 3rem 0;
+		width: 70vw;
+	}
+}

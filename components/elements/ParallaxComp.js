@@ -7,10 +7,10 @@ const ParallaxComp = ({ imgUrl, header, mystyle }) => {
 			layers={[
 				{
 					image: imgUrl,
-					speed: -10,
+					speed: -20, //thit value is translate x10 px
 				},
 				{
-					speed: 25,
+					speed: 15,
 					rotate: [0, 15],
 					translateX: [0, 10],
 					children: (
