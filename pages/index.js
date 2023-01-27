@@ -4,6 +4,7 @@ import OurDrones from "../components/sections/OurDrones";
 import WhatIsFPV from "../components/sections/WhatIsFPV";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Portfolio from "../components/sections/Portfolio";
+import Footer from "../components/sections/Footer";
 
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 			</ParallaxProvider>
 			<OurDrones />
 			<Portfolio />
+			<Footer />
 		</>
 	);
 }

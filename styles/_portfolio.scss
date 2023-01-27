@@ -1,7 +1,7 @@
 .portfolio {
 	position: absolute;
 	top: 850vh; //initial value if JS code doesn't work
-	padding-top: 10rem;
+	padding-bottom: 10rem; //margin is not added in offsetHeight so it needs to be padding
 	width: 100%;
 	display: flex;
 	align-items: center;

@@ -33,7 +33,7 @@ const Portfolio = () => {
 		};
 	}, [offsetTop]);
 	return (
-		<section className="portfolio" style={{ top: offsetTop }}>
+		<section className="portfolio" id="portfolio" style={{ top: offsetTop }}>
 			<h2 className="portfolio__title">Zobacz niektóre z naszych realizacji</h2>
 			<VideoCard embedID="IVxvZQ5t8k4" title="Zwiedzanie pewnego miasta" />
 			<VideoCard embedID="2RJT-cdmc74" title="Moto Session 2022 Lublin" />

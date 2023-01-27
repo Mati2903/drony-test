@@ -27,24 +27,27 @@
 			transform: translate(-50%, -50%);
 			font-size: 5rem;
 		}
-		.check-for-more {
-			position: absolute;
-			bottom: 20%;
-			color: white;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			//for changing opacity on scroll in video.js file
-			transition: opacity 0.5s ease-in-out;
+	}
+	.check-for-more {
+		position: absolute;
+		z-index: 5;
+		top: 60vh;
+		left: 50%;
+		transform: translateX(-50%);
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		//for changing opacity on scroll in video.js file
+		transition: opacity 0.5s ease-in-out;
 
-			span {
-				font-size: 2rem;
-			}
-			svg {
-				font-size: 4rem;
-				animation: arrowMove 3.5s ease-in infinite;
-			}
+		span {
+			font-size: 2rem;
+		}
+		svg {
+			font-size: 4rem;
+			animation: arrowMove 3.5s ease-in infinite;
 		}
 	}
 

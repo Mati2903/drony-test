@@ -88,12 +88,11 @@ const Video = () => {
 					Oops!... Twoja wyszukiwarka nie obsługuje tagu video :-/ Spróbuj
 					otworzyć stronę w innej przeglądarce.
 				</video>
-				<a href="#more" className="check-for-more" ref={checkForMoreRef}>
-					<span>Zobacz nasze nagrania</span>
-					<MdKeyboardArrowDown />
-				</a>
 			</div>
-
+			<a href="#portfolio" className="check-for-more" ref={checkForMoreRef}>
+				<span>Kliknij i zobacz nasze nagrania</span>
+				<MdKeyboardArrowDown />
+			</a>
 			<Logo logoRef={videoSectionRef} />
 			<Shadow targetRef={videoRef} />
 		</section>
