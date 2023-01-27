@@ -66,11 +66,16 @@ const Footer = () => {
 					<a
 						href="https://www.facebook.com/people/Propwash-Nagrania-Dronem-FPV/100089365263051/"
 						target="_blank"
+						rel="noreferrer"
 					>
 						<BsFacebook />
 						PROPWASH na Facebooku
 					</a>
-					<a href="https://www.youtube.com/@propwash" target="_blank">
+					<a
+						href="https://www.youtube.com/@propwash"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<BsYoutube />
 						PROPWASH na YouTube
 					</a>
