@@ -35,13 +35,13 @@ const ContactBtn = () => {
 		<div className={`nav__contact-list ${open ? "open" : ""}`}>
 			<button className="nav__contact-btn">KONTAKT</button>
 			<div className="nav__contact-group">
-				<a href="tel:123-456-7890">
+				<a href="tel:+48662038866">
 					<BsTelephone />
-					123-456-7890
+					+48 662 038 866
 				</a>
-				<a href="mailto:mail@test.pl">
+				<a href="mailto:propwash.info@gmail.com">
 					<MdAlternateEmail />
-					info@propwash.com
+					propwash.info@gmail.com
 				</a>
 				<div className="nav__contact-group-close">
 					<GrClose />
