@@ -78,6 +78,7 @@ const Video = () => {
 					className="video__element"
 					autoPlay
 					loop
+					playsInline
 					muted={true}
 					src="/desktop.mp4"
 					ref={videoRef}
