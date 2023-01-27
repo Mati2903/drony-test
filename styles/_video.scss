@@ -40,7 +40,8 @@
 		justify-content: center;
 		flex-direction: column;
 		//for changing opacity on scroll in video.js file
-		-webkit-transition: opacity 0.5s ease-in-out; //Safari
+		-webkit-transition-property: opacity; //Safari
+		-webkit-transition-duration: 0.5s; //Safari
 		transition: opacity 0.5s ease-in-out;
 
 		span {
