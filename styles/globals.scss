@@ -33,8 +33,13 @@ a {
 	color: inherit;
 	text-decoration: none;
 	transition: color 0.2s ease-in-out;
+	padding: 0.3rem;
 	&:hover {
 		color: rgb(70, 86, 176);
+	}
+	&:focus {
+		outline: 2px solid rgb(70, 86, 176);
+		border-radius: 4px;
 	}
 }
 

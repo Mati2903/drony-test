@@ -23,17 +23,24 @@ const ContactBtn = () => {
 		contactBtn.addEventListener("click", handleContactOpen);
 		closeBtn.addEventListener("click", handleContactClose);
 		section.addEventListener("click", handleContactClose);
+		//for accessibility purposes
+		contactBtn.addEventListener("focus", handleContactOpen);
+		closeBtn.addEventListener("keydown", handleContactClose);
 
 		return () => {
 			contactBtn.removeEventListener("click", handleContactOpen);
 			closeBtn.removeEventListener("click", handleContactClose);
 			section.removeEventListener("click", handleContactClose);
+			contactBtn.removeEventListener("focus", handleContactOpen);
+			closeBtn.removeEventListener("keydown", handleContactClose);
 		};
 	}, [open]);
 
 	return (
 		<div className={`nav__contact-list ${open ? "open" : ""}`}>
-			<button className="nav__contact-btn">KONTAKT</button>
+			<button className="nav__contact-btn" tabIndex={0}>
+				KONTAKT
+			</button>
 			<div className="nav__contact-group">
 				<a href="tel:+48662038866">
 					<BsTelephone />
@@ -43,7 +50,7 @@ const ContactBtn = () => {
 					<MdAlternateEmail />
 					propwash.info@gmail.com
 				</a>
-				<div className="nav__contact-group-close">
+				<div className="nav__contact-group-close" tabIndex={0}>
 					<GrClose />
 				</div>
 			</div>

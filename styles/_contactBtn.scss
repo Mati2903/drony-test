@@ -31,6 +31,9 @@
 		padding: 0;
 		// transition for closing contact
 		transition: visibility 0s linear 1s, height 0s linear 1s;
+		&:focus {
+			outline: 2px solid red;
+		}
 	}
 	.nav__contact-group {
 		display: flex;
@@ -52,6 +55,9 @@
 			justify-content: center;
 			align-items: center;
 			gap: 0.5rem;
+			//for focus border
+			padding: 0;
+			transition: padding 0.5s;
 		}
 	}
 }
@@ -81,6 +87,14 @@
 			cursor: pointer;
 			top: 10px;
 			transition: top 0.3s linear 1s;
+			&:focus {
+				outline: 2px solid rgb(70, 86, 176);
+				border-radius: 4px;
+			}
+		}
+		a {
+			//for focus
+			padding: 0.3rem;
 		}
 	}
 }
