@@ -68,10 +68,11 @@ const WhatIsFPV = () => {
 				<p className="what-is-fpv__paragraph">
 					W zależności od potrzeb oferujemy profesjonalną obróbkę materiału
 					wideo w specjalistycznych programach graficznych, dzięki czemu nasze
-					filmy są estetyczne i spełniają najwyższe standardy jakości.Możemy
+					filmy są estetyczne i spełniają najwyższe standardy jakości. Możemy
 					dostarczyć również surowy materiał video do dalszej obróbki przez
 					klienta.
 				</p>
+				<ParallaxComp bgImgUrl="./desk.png" />
 				<p className="what-is-fpv__paragraph">
 					Dzięki naszym dronom FPV, jesteśmy w stanie sfilmować różnego rodzaju
 					wydarzenia sportowe, reklamy, filmy dokumentalne, krajobrazy czy też
