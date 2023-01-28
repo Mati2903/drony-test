@@ -8,4 +8,11 @@
 		padding: 1rem 1rem 3rem;
 		color: white;
 	}
+	&__paragraph {
+		width: 70%;
+		max-width: calc(1920 * 0.7px);
+		text-align: left;
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 auto;
+	}
 }

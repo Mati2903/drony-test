@@ -58,26 +58,26 @@ const WhatIsFPV = () => {
 				<p className="what-is-fpv__paragraph">
 					Nasza firma specjalizuje się w filmowaniu za pomocą dronów FPV, czyli
 					First Person View. Drony te pozwalają na lot widziany oczami pilota
-					dzięki niewielkiej kamerze, która przesyła obraz na specjalne okulary
-					lub ekran.
+					dzięki dodatkowej niewielkiej kamerze, która przesyła obraz na
+					specjalne okulary lub ekran.
 				</p>
 				<ParallaxComp
 					bgImgUrl="./landscape3.jpg"
 					childImgUrl="./fpvdrone.png"
 				/>
 				<p className="what-is-fpv__paragraph">
-					Dzięki naszym dronom FPV, jesteśmy w stanie sfilmować różnego rodzaju
-					wydarzenia sportowe, reklamy, filmy dokumentalne, krajobrazy czy też
-					wnętrza budynków. Nasze filmy są nie tylko estetyczne, ale również
-					innowacyjne i oryginalne. Zapraszamy do skorzystania z naszych usług i
-					dołączenia do grona zadowolonych klientów.
-				</p>
-				<p className="what-is-fpv__paragraph">
 					W zależności od potrzeb oferujemy profesjonalną obróbkę materiału
 					wideo w specjalistycznych programach graficznych, dzięki czemu nasze
 					filmy są estetyczne i spełniają najwyższe standardy jakości.Możemy
 					dostarczyć również surowy materiał video do dalszej obróbki przez
 					klienta.
+				</p>
+				<p className="what-is-fpv__paragraph">
+					Dzięki naszym dronom FPV, jesteśmy w stanie sfilmować różnego rodzaju
+					wydarzenia sportowe, reklamy, filmy dokumentalne, krajobrazy czy też
+					wnętrza budynków. Nasze filmy są nie tylko estetyczne, ale również
+					innowacyjne i oryginalne. Zapraszamy do skorzystania z naszych usług i
+					dołączenia do grona zadowolonych klientów.
 				</p>
 				<h3 className="what-is-fpv__subtitle">Co wyróżnia drony FPV ?</h3>
 				<p className="what-is-fpv__paragraph">

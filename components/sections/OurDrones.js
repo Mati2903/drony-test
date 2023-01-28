@@ -34,6 +34,12 @@ const OurDrones = () => {
 	return (
 		<section className="our-drones" style={{ top: offsetTop }}>
 			<h2 className="our-drones__title">Sprzęt na którym pracujemy</h2>
+			<p className="our-drones__paragraph">
+				Wszystkie drony, których używamy, są przez nas projektowane i budowane
+				od podstaw. Pozwala nam to na jeszcze lepsze dostosowanie ich do potrzeb
+				naszych klientów. Dzięki temu jesteśmy w stanie zapewnić najwyższą
+				jakość nagrania oraz bezpieczeństwo podczas realizacji każdego zlecenia.
+			</p>
 			<TextAndImage
 				title="Dron 5” Freestyle"
 				paragraph="Ten typ drona wykorzystujemy do nagrywania dynamicznych scen na wolnym powietrzu. Pozwala on na wykonywanie różnego rodzaju akrobacji oraz lot za samochodami czy motocyklami. Korzystamy z niego również do filmowania widokowych ujęć w pobliżu budynków lub innych dużych obiektów."
