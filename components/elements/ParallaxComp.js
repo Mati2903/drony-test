@@ -1,12 +1,12 @@
 import { ParallaxBanner } from "react-scroll-parallax";
 
-const ParallaxComp = ({ imgUrl, header, mystyle }) => {
+const ParallaxComp = ({ bgImgUrl, childImgUrl }) => {
 	return (
 		<ParallaxBanner
 			className="element"
 			layers={[
 				{
-					image: imgUrl,
+					image: bgImgUrl,
 					speed: -20, //thit value is translate x10 px
 				},
 				{
@@ -15,7 +15,7 @@ const ParallaxComp = ({ imgUrl, header, mystyle }) => {
 					translateX: [0, 10],
 					children: (
 						<div className="container">
-							<img src="./fpvdrone.png" />
+							<img src={childImgUrl} />
 						</div>
 					),
 				},

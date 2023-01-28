@@ -54,12 +54,15 @@ h5 {
 	margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-	body {
-		color: white;
-		background: black;
-	}
+h2 {
+	font-size: 3rem;
+	line-height: 4rem;
+}
+h3 {
+	font-size: 2rem;
+	line-height: 3rem;
+}
+p {
+	font-size: 1.2rem;
+	line-height: 2.4rem;
 }

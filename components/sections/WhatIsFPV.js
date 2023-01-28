@@ -61,7 +61,10 @@ const WhatIsFPV = () => {
 					dzięki niewielkiej kamerze, która przesyła obraz na specjalne okulary
 					lub ekran.
 				</p>
-				<ParallaxComp imgUrl="./landscape3.jpg" header="Napis" />
+				<ParallaxComp
+					bgImgUrl="./landscape3.jpg"
+					childImgUrl="./fpvdrone.png"
+				/>
 				<p className="what-is-fpv__paragraph">
 					Dzięki naszym dronom FPV, jesteśmy w stanie sfilmować różnego rodzaju
 					wydarzenia sportowe, reklamy, filmy dokumentalne, krajobrazy czy też
@@ -76,7 +79,7 @@ const WhatIsFPV = () => {
 					dostarczyć również surowy materiał video do dalszej obróbki przez
 					klienta.
 				</p>
-				<h3 className="what-is-fpv__subtitle">Czym wyróżniają się drony FPV</h3>
+				<h3 className="what-is-fpv__subtitle">Co wyróżnia drony FPV ?</h3>
 				<p className="what-is-fpv__paragraph">
 					Drony FPV oferują wiele korzyści w porównaniu do zwykłych dronów.
 					Przede wszystkim pozwalają na bardziej precyzyjne i dynamiczne ujęcia,
