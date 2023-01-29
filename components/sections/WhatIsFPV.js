@@ -65,30 +65,40 @@ const WhatIsFPV = () => {
 					bgImgUrl="./landscape3.jpg"
 					childImgUrl="./fpvdrone.png"
 				/>
+				<h3 className="what-is-fpv__subtitle">Profesjonalne nagrania</h3>
 				<p className="what-is-fpv__paragraph">
-					W zależności od potrzeb oferujemy profesjonalną obróbkę materiału
-					wideo w specjalistycznych programach graficznych, dzięki czemu nasze
-					filmy są estetyczne i spełniają najwyższe standardy jakości. Możemy
-					dostarczyć również surowy materiał video do dalszej obróbki przez
-					klienta.
+					W naszych dronach korzystamy z najwyższej jakości komponentów i kamer
+					renomowanych producentów. Sprzęt jest również na bieżąco
+					modernizowany, co pozwala nam na ciągłe ulepszanie jakości naszych
+					nagrań. <br />
+					Dzięki temu jesteśmy w stanie sfilmować różnego rodzaju wydarzenia
+					sportowe, reklamy, filmy dokumentalne, krajobrazy czy też wnętrza
+					budynków w profesjonalny i unikatowy sposób.
+				</p>
+				<ParallaxComp bgImgUrl="./drift.png" />
+				<h3 className="what-is-fpv__subtitle">Montaż filmów</h3>
+				<p className="what-is-fpv__paragraph">
+					W zależności od potrzeb oferujemy również obróbkę materiału wideo w
+					specjalistycznych programach graficznych, dzięki czemu nasze filmy są
+					estetyczne i spełniają najwyższe standardy jakości a klient otrzymuje
+					gotowe do użycia nagranie.
+					<br />
+					Możemy dostarczyć również surowy materiał wideo do dalszej obróbki
+					przez klienta.
 				</p>
 				<ParallaxComp bgImgUrl="./desk.png" />
-				<p className="what-is-fpv__paragraph">
-					Dzięki naszym dronom FPV, jesteśmy w stanie sfilmować różnego rodzaju
-					wydarzenia sportowe, reklamy, filmy dokumentalne, krajobrazy czy też
-					wnętrza budynków. Nasze filmy są nie tylko estetyczne, ale również
-					innowacyjne i oryginalne. Zapraszamy do skorzystania z naszych usług i
-					dołączenia do grona zadowolonych klientów.
-				</p>
-				<h3 className="what-is-fpv__subtitle">Co wyróżnia drony FPV ?</h3>
+				<h3 className="what-is-fpv__subtitle">Dlaczego FPV ?</h3>
 				<p className="what-is-fpv__paragraph">
 					Drony FPV oferują wiele korzyści w porównaniu do zwykłych dronów.
-					Przede wszystkim pozwalają na bardziej precyzyjne i dynamiczne ujęcia,
-					co jest szczególnie ważne w przypadku filmowania sportów czy akrobacji
-					lotniczych. Dodatkowo, drony FPV są zwykle mniejsze i lżejsze, co
-					pozwala na lot w trudno dostępnych miejscach czy też w pobliżu ludzi i
-					obiektów.
+					Przede wszystkim pozwalają na bardziej precyzyjne i dynamiczne ujęcia.
+					Są również mniejsze i lżejsze od tradycyjnych dronów, co umożliwia lot
+					w trudno dostępnych miejscach, w pobliżu ludzi i obiektów.
+					<br /> Dzięki temu jesteśmy w stanie zapewnić naszym klientom filmy o
+					najwyższej jakości, zrealizowane z zupełnie nowej perspektywy.
+					Zapraszamy do skorzystania z naszych usług i dołączenia do grona
+					zadowolonych klientów.
 				</p>
+				<ParallaxComp bgImgUrl="./fpvset.png" />
 			</div>
 			<div></div>
 		</section>

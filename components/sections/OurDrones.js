@@ -37,8 +37,9 @@ const OurDrones = () => {
 			<p className="our-drones__paragraph">
 				Wszystkie drony, których używamy, są przez nas projektowane i budowane
 				od podstaw. Pozwala nam to na jeszcze lepsze dostosowanie ich do potrzeb
-				naszych klientów. Dzięki temu jesteśmy w stanie zapewnić najwyższą
-				jakość nagrania oraz bezpieczeństwo podczas realizacji każdego zlecenia.
+				naszych klientów. <br />
+				Dzięki temu jesteśmy w stanie zapewnić najwyższą jakość nagrania oraz
+				bezpieczeństwo podczas realizacji każdego zlecenia.
 			</p>
 			<TextAndImage
 				title="Dron 5” Freestyle"
