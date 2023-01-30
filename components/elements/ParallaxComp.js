@@ -3,7 +3,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 const ParallaxComp = ({ bgImgUrl, childImgUrl }) => {
 	return (
 		<ParallaxBanner
-			className="element"
+			className="parallax-banner"
 			layers={[
 				{
 					image: bgImgUrl,
@@ -15,7 +15,7 @@ const ParallaxComp = ({ bgImgUrl, childImgUrl }) => {
 							rotate: [0, 15],
 							translateX: [0, 10],
 							children: (
-								<div className="container">
+								<div className="parallax-child-container">
 									<img src={childImgUrl} />
 								</div>
 							),

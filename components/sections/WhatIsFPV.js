@@ -29,24 +29,6 @@ const WhatIsFPV = () => {
 		};
 	}, [offsetTop]);
 
-	//set top value for section based on above section height
-	// useEffect(() => {
-	// 	const handleResize = () => {
-	// 		setElementOffsetBottom(
-	// 			document.querySelector(".our-drones").offsetTop +
-	// 				document.querySelector(".our-drones").offsetHeight
-	// 		);
-	// 	};
-
-	// 	//listener for window resize event, e.g. when user is changing view from portrait to landscape
-	// 	window.addEventListener("scroll", handleResize);
-	// 	window.addEventListener("resize", handleResize);
-	// 	return () => {
-	// 		window.removeEventListener("scroll", handleResize);
-	// 		window.removeEventListener("resize", handleResize);
-	// 	};
-	// }, [elementOffsetBottom]);
-
 	return (
 		<section
 			id="what-is-fpv"
@@ -62,7 +44,7 @@ const WhatIsFPV = () => {
 					specjalne okulary lub ekran.
 				</p>
 				<ParallaxComp
-					bgImgUrl="./landscape3.jpg"
+					bgImgUrl="./landscape2.jpg"
 					childImgUrl="./fpvdrone.png"
 				/>
 				<h3 className="what-is-fpv__subtitle">Profesjonalne nagrania</h3>
@@ -78,7 +60,7 @@ const WhatIsFPV = () => {
 				<ParallaxComp bgImgUrl="./drift.png" />
 				<h3 className="what-is-fpv__subtitle">Montaż filmów</h3>
 				<p className="what-is-fpv__paragraph">
-					W zależności od potrzeb oferujemy również obróbkę materiału wideo w
+					W zależności od potrzeb oferujemy obróbkę materiału wideo w
 					specjalistycznych programach graficznych, dzięki czemu nasze filmy są
 					estetyczne i spełniają najwyższe standardy jakości a klient otrzymuje
 					gotowe do użycia nagranie.
@@ -89,10 +71,10 @@ const WhatIsFPV = () => {
 				<ParallaxComp bgImgUrl="./desk.png" />
 				<h3 className="what-is-fpv__subtitle">Dlaczego FPV ?</h3>
 				<p className="what-is-fpv__paragraph">
-					Drony FPV oferują wiele korzyści w porównaniu do zwykłych dronów.
+					Drony FPV oferują wiele korzyści w porównaniu do tradycyjnych dronów.
 					Przede wszystkim pozwalają na bardziej precyzyjne i dynamiczne ujęcia.
-					Są również mniejsze i lżejsze od tradycyjnych dronów, co umożliwia lot
-					w trudno dostępnych miejscach, w pobliżu ludzi i obiektów.
+					Są również mniejsze i lżejsze, co umożliwia lot w trudno dostępnych
+					miejscach, w pobliżu ludzi i obiektów.
 					<br /> Dzięki temu jesteśmy w stanie zapewnić naszym klientom filmy o
 					najwyższej jakości, zrealizowane z zupełnie nowej perspektywy.
 					Zapraszamy do skorzystania z naszych usług i dołączenia do grona

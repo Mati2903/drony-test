@@ -1,8 +1,8 @@
-.element {
+.parallax-banner {
 	height: 70vh;
 	width: 100%;
 	margin: 4rem 0;
-	.container {
+	.parallax-child-container {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%); //centering image
