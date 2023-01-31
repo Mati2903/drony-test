@@ -4,6 +4,15 @@ export default function Document() {
 	return (
 		<Html lang="pl">
 			<Head>
+				<title>PROPWASH - Profesjonalne nagrania dronami FPV</title>
+				<meta
+					name="description"
+					content="Wykonujemy profesionalne nagrania dronami FPV oraz tradycyjnymi. Oferujemy również profesionalną obróbkę audiowizualną nagrań"
+				/>
+				<meta
+					name="keywords"
+					content="fpv, nagrania fpv, nagrania dronem, filmy dronem, filmy z drona, nagrania z drona, filmy z drona fpv, filmy fpv, filmowanie fpv, usługi dronem, usługi filmowania dronem, profesjonalne usługi filmowania dronem, profesjonalne filmy z drona fpv, nagrania i montaż filmów z drona, drony first person view, Lublin, lubelskie, podkarpackie, Rzeszów, Kraków, mazowieckie, Warszawa"
+				/>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link
 					rel="preconnect"
@@ -32,6 +41,8 @@ export default function Document() {
 					href="/favicon-16x16.png"
 				/>
 				<link rel="manifest" href="/site.webmanifest" />
+
+				<meta name="robots" content="noindex,nofollow" />
 			</Head>
 			<body>
 				<Main />

@@ -81,7 +81,7 @@ const Footer = () => {
 					</a>
 				</div>
 			</div>
-			<p className="footer__copyright">Copyright © {year} Propwash</p>
+			<p className="footer__copyright">Copyright © {year} | PROPWASH</p>
 		</footer>
 	);
 };

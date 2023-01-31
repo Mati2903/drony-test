@@ -57,7 +57,7 @@ const OurDrones = () => {
 			/>
 			<TextAndImage
 				title="Dron 2,5” Mini CineWhoop"
-				paragraph="Ten mały i lekki dron jest idealny do latania i filmowania wewnątrz pomieszczeń, w pobliżu drogich przedmiotów czy też latając bardzo blisko ludzi. Dzięki jego niewielkim gabarytom i wadze jest on bardzo precyzyjny. Wykonujemy nim między innymi przeloty przez całe obiekty, a nawet wnętrza samochodów"
+				paragraph="Ten mały i lekki dron jest idealny do latania i filmowania wewnątrz pomieszczeń, w pobliżu drogich przedmiotów czy też latając bardzo blisko ludzi. Dzięki jego niewielkim gabarytom i wadze jest on bardzo precyzyjny. Wykonujemy nim między innymi przeloty przez całe obiekty, a nawet wnętrza samochodów."
 				imgUrl="/dron-2,5-mini-cinewhoop.png"
 				imgAlt="zdjęcie drona typu FPV 2,5 cala mini cinewhoop"
 				id={3}
@@ -65,7 +65,7 @@ const OurDrones = () => {
 			<TextAndImage
 				title="Kamery"
 				paragraph="
-				Nasze niezwykłe ujęcia i dynamiczne sceny nagrywamy kamerami GoPro serii 10 i 11. Pozwalają one na zapis obrazu w rozdzielczościach 5.3k, 4k, 2.7k, a także w dowolnym klatkażu i 10-bitowym systemie kolorów. Dzięki nim mamy pewność, że każdy nagrany przez nas materiał będzie wyglądał profesjonalnie i będzie miał wysoką jakość."
+				Nasze niezwykłe ujęcia i dynamiczne sceny nagrywamy kamerami GoPro serii 10 i 11. Pozwalają one na zapis obrazu w rozdzielczości do 5,3K, a także w dowolnym klatkażu i 10-bitowym systemie kolorów. Dzięki nim mamy pewność, że każdy nagrany przez nas materiał będzie najwyższej jakości."
 				imgUrl="/gopro11.png"
 				imgAlt="zdjęcie kamery gopro"
 				id={4}
