@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ParallaxComp from "../elements/ParallaxComp";
+import CompareSlider from "../elements/CompareSlider";
 
 const WhatIsFPV = () => {
 	const [offsetTop, setOffsetTop] = useState();
@@ -65,10 +66,12 @@ const WhatIsFPV = () => {
 					estetyczne i spełniają najwyższe standardy jakości a klient otrzymuje
 					gotowe do użycia nagranie.
 					<br />
-					Możemy dostarczyć również surowy materiał wideo do dalszej obróbki
-					przez klienta.
+					Możemy dostarczyć również surowy materiał wideo do dalszej obróbki we
+					własnym zakresie.
 				</p>
+
 				<ParallaxComp bgImgUrl="./desk.png" />
+				<CompareSlider />
 				<h3 className="what-is-fpv__subtitle">Dlaczego FPV ?</h3>
 				<p className="what-is-fpv__paragraph">
 					Drony FPV oferują wiele korzyści w porównaniu do tradycyjnych dronów.
@@ -77,6 +80,7 @@ const WhatIsFPV = () => {
 					miejscach, w pobliżu ludzi i obiektów.
 					<br /> Dzięki temu jesteśmy w stanie zapewnić naszym klientom filmy o
 					najwyższej jakości, zrealizowane z zupełnie nowej perspektywy.
+					<br />
 					Zapraszamy do skorzystania z naszych usług i dołączenia do grona
 					zadowolonych klientów.
 				</p>

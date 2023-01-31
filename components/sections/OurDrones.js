@@ -67,9 +67,8 @@ const OurDrones = () => {
 				paragraph="
 				Nasze niezwykłe ujęcia i dynamiczne sceny nagrywamy kamerami GoPro serii 10 i 11. Pozwalają one na zapis obrazu w rozdzielczościach 5.3k, 4k, 2.7k, a także w dowolnym klatkażu i 10-bitowym systemie kolorów. Dzięki nim mamy pewność, że każdy nagrany przez nas materiał będzie wyglądał profesjonalnie i będzie miał wysoką jakość."
 				imgUrl="/gopro11.png"
-				imgAlt="zdjęcie kamery gopro 11"
+				imgAlt="zdjęcie kamery gopro"
 				id={4}
-				img2Url="/gopro11.png"
 			/>
 		</section>
 	);
