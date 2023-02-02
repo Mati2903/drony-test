@@ -4,15 +4,12 @@
 	padding-top: 10rem;
 	padding-bottom: 10rem;
 	&__title {
-		text-align: center;
 		padding: 1rem 1rem 3rem;
-		color: white;
 	}
 	&__paragraph {
 		width: 85%;
 		max-width: calc(1920 * 0.7px);
 		text-align: left;
-		color: rgba(255, 255, 255, 0.6);
 		margin: 0 auto;
 		@media screen and (min-width: 768px) {
 			width: 70%;

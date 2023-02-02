@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BsTelephone, BsFacebook, BsYoutube } from "react-icons/bs";
 import { MdAlternateEmail } from "react-icons/md";
+import Link from "next/link";
 
 const Footer = () => {
 	const [offsetTop, setOffsetTop] = useState();
@@ -39,11 +40,21 @@ const Footer = () => {
 
 	return (
 		<footer className="footer" style={{ top: offsetTop }}>
+			<h2 className="footer__header">
+				Zachęcamy do kontaktu i obserwowania naszego profilu w mediach
+				społecznościowych
+			</h2>
 			<div className="footer__container">
 				<div className="footer__company-info">
 					{/* <p className="footer__column-title">Dane Firmy</p> */}
 					<address>
-						<img className="footer__logo" src="./logo-fpv-white.png" />
+						<Link href="/">
+							<img
+								src="/logo-fpv-white.png"
+								alt="logo firmy z nazwą Propwash i literą S ze strzałką"
+								className="footer__logo"
+							/>
+						</Link>
 						<p>Jabłonna Pierwsza 138</p>
 						<p>23-114 Jabłonna, Polska</p>
 						<p>NIP: 7133015122</p>

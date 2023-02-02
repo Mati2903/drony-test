@@ -25,7 +25,7 @@ const CompareSlider = () => {
 				Porównaj efekty graficznej obróbki materiału
 			</h4>
 			<span className="slider__text-container">
-				<p className="slider__before">Przed</p>
+				<p className="slider__text-before">Przed</p>
 				<p className="slider__text-after">Po</p>
 			</span>
 			<ReactCompareSlider
