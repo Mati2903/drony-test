@@ -58,7 +58,7 @@ const WhatIsFPV = () => {
 					sportowe, reklamy, filmy dokumentalne, krajobrazy czy też wnętrza
 					budynków w profesjonalny i unikatowy sposób.
 				</p>
-				<ParallaxComp bgImgUrl="./drift.png" />
+				<ParallaxComp bgImgUrl="./drift.jpg" />
 				<h3 className="what-is-fpv__subtitle">Montaż filmów</h3>
 				<p className="what-is-fpv__paragraph">
 					W zależności od potrzeb oferujemy obróbkę materiału wideo w
@@ -70,7 +70,7 @@ const WhatIsFPV = () => {
 					własnym zakresie.
 				</p>
 
-				<ParallaxComp bgImgUrl="./desk.png" />
+				<ParallaxComp bgImgUrl="./desk.jpg" />
 				<CompareSlider />
 				<h3 className="what-is-fpv__subtitle">Dlaczego FPV ?</h3>
 				<p className="what-is-fpv__paragraph">
